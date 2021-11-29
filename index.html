@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Art-quiz</title>
+</head>
+<body>
+   <div class="container">
+      <div class="logo" id="logo">
+         <img src="images/logo.png" alt="logo">
+      </div>
+
+         <div class="main">
+            
+<!-- ---------blockHomePage--------- -->
+
+            <div id="blockHomePage">
+               <div class="container-pic">
+                  <div class="container-choices" id="btnBlockArtists">
+                     <div class="main-menu__img main-menu__artists"></div>
+                     <p class="main-menu__descr">artists <span class="quiz">quiz</span></p>
+                  </div>
+                  <div class="container-choices" id="btnBlockPictures">
+                     <div class="main-menu__img main-menu__pictures"></div>
+                     <p class="main-menu__descr">pictures <span class="quiz">quiz</span></p>
+                  </div>
+               </div>
+               <button class="btn" id="btnSettings">
+                  <img src="images/Group.png" alt="group">
+                  <p>settings</p>
+               </button>
+            </div>
+
+<!-- ---------blockSettings--------- -->
+
+            <div class="hide" id="blockSettings">
+               <h2 class="title">Settings</h2>
+               <div class="container-pic">
+                  <div class="container-settings">
+                     <div class="main-settings">
+                        <img class="volume-on-pic" src="images/volume-on.png" alt="volume-on">
+                        <div class="container-change-volume">
+                           <img class="mute-button" src="images/volume-off.png" alt="volume-off" id="mute">
+                           <input class="slider" id="range" name="volume" min="0" max="100" value="100" type="range">
+                        </div>
+                        <p class="settings-text">volume</p>
+                     </div>
+                  </div>
+                  <div class="container-setting">
+                     <div class="main-settings">
+                        <img class="timer-picture" src="images/timer-picture.png" alt="timer-picture">
+                           <div class="container-for-label">
+                              <input class="check" id="check" type="checkbox" checked>
+                              <label for="check" class="on-off">ON/OFF</label>
+                           </div>
+                        <p class="settings-text">time game</p>
+                     </div>
+                  </div>
+               </div>
+               <button class="btn" id="btnSave">
+                  <p class="btn-text">save</p>
+               </button>
+            </div>
+
+<!-- -----------blockCategoryArtists-------- -->
+
+            <div class="hide" id="blockCategoryArtists">
+               <div class="wrapper-title-categories">
+                  <div class="btn btn-category" id="btnHomeFromArtists">
+                     <img src="images/house.png" alt="">
+                     <p class="btn-text">home</p>
+                  </div>
+                  <p class="title title__categoties">categories</p>
+                  <div class="btn btn-category hide">
+                     <img src="images/score.png" alt="home">
+                     <p class="btn-text">score</p>
+                  </div>
+               </div>
+               <div class="wrapper-card">
+                  <div class="card filter-gray" data-number="0">                  
+                     <div class="card-num">
+                        <div class="card-num__num">1</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">portrait</div>
+                     <div class="card-pic"><img src="img/0.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="1">
+                     <div class="card-num">
+                        <div class="card-num__num">2</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">landscape</div>
+                     <div class="card-pic"><img src="img/10.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="2">
+                     <div class="card-num">
+                        <div class="card-num__num">3</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">still life</div>
+                     <div class="card-pic"><img src="img/20.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="3">
+                     <div class="card-num">
+                        <div class="card-num__num">4</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">impressionism</div>
+                     <div class="card-pic"><img src="img/30.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="4">
+                     <div class="card-num">
+                        <div class="card-num__num">5</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">expressionism</div>
+                     <div class="card-pic"><img src="img/40.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="5">
+                     <div class="card-num">
+                        <div class="card-num__num">6</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">avant-garde</div>
+                     <div class="card-pic"><img src="img/50.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="6">
+                     <div class="card-num">
+                        <div class="card-num__num">7</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">renaissanse</div>
+                     <div class="card-pic"><img src="img/60.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="7">
+                     <div class="card-num">
+                        <div class="card-num__num">8</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">surrealism</div>
+                     <div class="card-pic"><img src="img/70.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="8">
+                     <div class="card-num">
+                        <div class="card-num__num">9</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">kitsch</div>
+                     <div class="card-pic"><img src="img/80.jpg" alt=""></div>
+                  </div>
+                  <div class="card filter-gray" data-number="9">
+                     <div class="card-num">
+                        <div class="card-num__num">10</div>
+                        <div class="card-num__progress"><span id="countRightAnswers">0</span>/10</div>
+                     </div>
+                     <div class="card-text">minimalism</div>
+                     <div class="card-pic"><img src="img/90.jpg" alt=""></div>
+                  </div>
+               </div>
+            </div>
+
+<!-- -----------blockCategoryPictures-------- -->
+
+            <div class="hide" id="blockCategoryPictures">
+               <div class="wrapper-title-categories">
+                  <div class="btn btn-category" id="btnHomeFromPictures">
+                     <img src="images/house.png" alt="">
+                     <p class="btn-text">home</p>
+                  </div>
+                  <p class="title title__categoties">categories</p>
+                  <div class="btn btn-category">
+                     <img src="images/score.png" alt="home">
+                     <p class="btn-text">score</p>
+                  </div>
+               </div>
+               <div class="wrapper-card">
+                  <div class="cardPic filter-grayPictures" data-number="12">                  
+                     <div class="card-num">
+                        <div class="card-num__num">1</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">portrait</div>
+                     <div class="card-pic"><img src="img/120.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="13">
+                     <div class="card-num">
+                        <div class="card-num__num">2</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">landscape</div>
+                     <div class="card-pic"><img src="img/130.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="14">
+                     <div class="card-num">
+                        <div class="card-num__num">3</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">still life</div>
+                     <div class="card-pic"><img src="img/140.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="15">
+                     <div class="card-num">
+                        <div class="card-num__num">4</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">impressionism</div>
+                     <div class="card-pic"><img src="img/150.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="16">
+                     <div class="card-num">
+                        <div class="card-num__num">5</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">expressionism</div>
+                     <div class="card-pic"><img src="img/160.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="17">
+                     <div class="card-num">
+                        <div class="card-num__num">6</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">avant-garde</div>
+                     <div class="card-pic"><img src="img/170.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="18">
+                     <div class="card-num">
+                        <div class="card-num__num">7</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">renaissanse</div>
+                     <div class="card-pic"><img src="img/180.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="19">
+                     <div class="card-num">
+                        <div class="card-num__num">8</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">surrealism</div>
+                     <div class="card-pic"><img src="img/190.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="20">
+                     <div class="card-num">
+                        <div class="card-num__num">9</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">kitsch</div>
+                     <div class="card-pic"><img src="img/200.jpg" alt=""></div>
+                  </div>
+                  <div class="cardPic filter-grayPictures" data-number="21">
+                     <div class="card-num">
+                        <div class="card-num__num">10</div>
+                        <div class="card-num__progress"><span id="countRightAnswersPictures">0</span>/10</div>
+                     </div>
+                     <div class="card-text">minimalism</div>
+                     <div class="card-pic"><img src="img/210.jpg" alt=""></div>
+                  </div>
+               </div>
+            </div>
+
+<!-- -------------Game Page Artists------------- -->
+
+            <div class="wrapper-game hide" id="blockGameArtists">
+               <div class="wrapper-questions">
+                  <div class="wrapper-questions__logo"></div>
+                  <div class="wrapper-questions__timer" ><img src="images/timer-picture.png" alt="timer-picture"> <p id="timer"</p> </div>
+                  <div class="btn btn-category" id="btnHomeFromGameArtists">
+                     <img src="images/house.png" alt="">
+                     <p class="btn-text">home</p>
+                  </div>
+               </div>
+               <div class="questions__text">Who is the author of this picture?</div>
+               <div class="wrapper-game">
+                  <div class="wrapper-game__pic" id="pictureForArtists"></div>
+                  <div class="wrapper-game__pagination">
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                     <div class="wrapper-game__pagination-item"></div>
+                  </div>
+               </div>
+               <div class="answers-wrapper">
+                  <div class="answers__answer" data-number="1"></div>
+                  <div class="answers__answer" data-number="2"></div>
+                  <div class="answers__answer" data-number="3"></div>
+                  <div class="answers__answer" data-number="4"></div>
+               </div>
+            </div>
+
+            <!-- -------------Game Page Pictures------------- -->
+
+            <div class="wrapper-game hide" id="blockGamePictures">
+               <div class="wrapper-questions">
+                  <div class="wrapper-questions__logo"></div>
+                  <div class="wrapper-questions__timer" ><img src="images/timer-picture.png" alt="timer-picture"> <p id="timer"</p> </div>
+                  <div class="btn btn-category" id="btnHomeFromGamePictures">
+                     <img src="images/house.png" alt="">
+                     <p class="btn-text">home</p>
+                  </div>
+               </div>
+               <div class="questions__text">какую картину написал <span id="author"></span>?</div>
+               <div class="wrapper-game__forpictures">
+                  <div class="wrapper-game__pictures" id="pictureForPictures" data-number="1"></div>
+                  <div class="wrapper-game__pictures" id="pictureForPictures" data-number="2"></div>
+                  <div class="wrapper-game__pictures" id="pictureForPictures" data-number="3"></div>
+                  <div class="wrapper-game__pictures" id="pictureForPictures" data-number="4"></div>
+                  <div class="wrapper-game__pagination">
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                     <div class="wrapper-game__pagination-itemPictures"></div>
+                  </div>
+               </div>
+            </div>
+
+<!-- ---------End main--------- -->
+         </div>
+
+
+<!-- ---------Footer------------ -->
+
+         <footer class="footer">
+            <div class="footer-item">© 2021</div>
+            <div class="rolling"><a class="footer__link" href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="logo"></a></div>
+            <div class="footer-item"><a href="https://github.com/m1r1k25">m1r1k25</a></div>
+         </footer>
+   </div>
+   <audio class="audioCorrect" src="audio/correct.mp3"></audio>
+   <audio class="audioWrong" src="audio/wrong.mp3"></audio>
+   <audio class="audioEnd" src="audio/end.mp3"></audio>
+   <script src="js/index.js"></script>
+</body>
+</html>
